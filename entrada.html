@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElGranMeson</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="headerNo">
+
+        <div class="contenedor">
+            <div class="barra_black">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">El gran<span class="logo__bold">Mesón</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cafeteria.html" class="navegacion__enlace">Cafetería</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <h3 class="centrar-texto subtitle_noindex">Preparación</h3>
+
+        <div style="width: 100%; display: flex; justify-content: center;">
+            <img id="imagen-platillo" src="img/blog1.jpg" alt="imagen del blog" style="max-height: 500px;">
+        </div>        
+        <p style="text-align: justify;" id="descripcion-platillo"></p>
+
+        <div class="entrada__contenido">                  
+            <a href="#" class="boton boton--primario" onclick="history.back(); return false;">Volver</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">El gran <span class="logo__bold">Mesón</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cafeteria.html" class="navegacion__enlace">Cafetería</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+    <script src="js/modernizr.js"></script>
+</body>
+<script src="js/entrada.js"></script>
+</html>

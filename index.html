@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElGranMeson</title>
+    <meta name="description" content="Página web de blog de café">
+
+    <!-- Prefetch -->
+    <link rel="prefetch" href="nosotros.html" as="document">
+
+    <!-- Preload -->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+        crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">El gran <span class="logo__bold">Mesón</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cafeteria.html" class="navegacion__enlace">Cafetería</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="header__texto">
+            <h2 class="no-margin">Cortes, platillos, reservaciónes y novedades</h2>
+            <p class="no-margin">Conoce el sabor de los expertos con las mejores recetas</p>
+        </div>
+    </header>
+
+    <div class="contenedor contenido-principal">
+        <main class="blog">
+            <h3>Epecialidades</h3>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/platillos/tbone.webp" type="image/webp">
+                            <img loading="lazy" src="img/platillos/tbone.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+
+
+                </article>
+
+                <li class="widget-curso">
+                    <h4 class="no-margin">T-bone a las brazas</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$800</span>
+                    </p>
+                    <p class="widget-curso__label">Guarniciónes:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Ensalada de frutos secos</li>
+                        <li>Puré de papa con grabby</li>
+                        <li>Arroz blanco</li>
+                    </ul>                   
+                </li>
+                <div class="entrada__contenido">
+                    <p>Deleita tu paladar con este excelente platillo, acompañado con hierbas frescas y una guarnición
+                        de ensalada dulce con salsa de arándano</p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(1)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/platillos/pechuga.webp" type="image/webp">
+                            <img loading="lazy" src="img/platillos/pechuga.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Pechuga braseada con bouquet de verduras al carbón </h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$300</span>
+                    </p>
+                    <p class="widget-curso__label">Guarniciónes:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Puré rústico de papa con aceite de trufa</li>
+                        <li>Elote baby caramelizado con mantequilla especiada</li>
+                        <li>Arroz jazmín con almendras tostadas y ralladura de limón</li>
+                    </ul>                    
+
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>La entrada perfecta! Pechuga de pollo con guarnición de verduras frescas asadas y hierbas de olor
+                    </p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(2)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/platillos/estofado.webp" type="image/webp">
+                            <img loading="lazy" src="img/platillos/estofado.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Estofado de res al vino tinto con jardín de hortalizas glaseadas</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$500</span>
+                    </p>
+                    <p class="widget-curso__label">Guarniciónes:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Puré de papas al romero</li>
+                        <li>Polenta cremosa al parmesano</li>
+                        <li>Pan rústico artesanal</li>
+                    </ul>                    
+
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Deleita tu paladar con este estofado de res cocinado a fuego lento en una reducción de vino
+                        tinto, acompañado de hortalizas glaseadas que realzan su sabor profundo y reconfortante. Una
+                        experiencia culinaria intensa, aromatizada con hierbas frescas y el calor de la cocina
+                        tradicional.</p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(3)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/platillos/espagueti.webp" type="image/webp">
+                            <img loading="lazy" src="img/platillos/espagueti.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Spaghetti al ragú de res salteada con hierbas finas </h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$400</span>
+                    </p>
+                    <p class="widget-curso__label">Guarniciónes:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Pan de ajo al horno con mantequilla de perejil y parmesano</li>
+                        <li>Ensalada caprese con pesto de albahaca fresca</li>
+                        <li>Vegetales salteados al ajillo con un toque de limón</li>
+                    </ul>                    
+
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Sorprende a tus sentidos con este espagueti artesanal bañado en una salsa especiada de tomate,
+                        coronado con suculentos trozos de carne de res salteados al punto perfecto. Un platillo robusto
+                        y reconfortante, acompañado de notas herbales y una explosión de sabor en cada bocado.</p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(4)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/platillos/carne_salsa.webp" type="image/webp">
+                            <img loading="lazy" src="img/platillos/carne_salsa.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Tomahawk al ajo confitado con mantequilla de hierbas y sal de mar</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$800</span>
+                    </p>
+                    <p class="widget-curso__label">Guarniciónes:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Papas cambray doradas con romero y escamas de sal</li>
+                        <li>Espárragos a la parrilla con reducción de balsámico</li>
+                        <li>Risotto cremoso de parmesano y vino blanco</li>
+                    </ul>                    
+
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Una experiencia de sabor imponente: corte premium tomahawk sellado a la perfección, infusionado
+                        con ajo confitado y terminado con mantequilla de hierbas frescas. Cada bocado revela la
+                        jugosidad de la carne y el toque ahumado de la parrilla, ideal para los verdaderos amantes del
+                        asado</p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(5)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/platillos/carne_frita.webp" type="image/webp">
+                            <img loading="lazy" src="img/platillos/carne_frita.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Camarones gratinados en lecho crujiente con frijoles refritos al queso fundido
+                    </h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$500</span>
+                    </p>
+                    <p class="widget-curso__label">Guarniciónes:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Arroz al cilantro y lima</li>
+                        <li>Esquites al epazote con queso fresco y chile piquín</li>
+                        <li>Guacamole con granada y chips de plátano macho</li>
+                    </ul>                    
+
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Déjate cautivar por la fusión de texturas y sabores en este platillo que combina camarones
+                        jugosos gratinados con queso dorado, servidos sobre una fresca cama de lechuga, totopos
+                        crujientes y frijoles refritos cremosos. Una propuesta irresistible que mezcla lo tradicional
+                        con un toque contemporáneo</p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(6)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+            </article>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/bebidas/caipirinha_rodajas.webp" type="image/webp">
+                            <img loading="lazy" src="img/bebidas/caipirinha_rodajas.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Caipiriña cítrica de naranja con perfume de romero fresco</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$340</span>
+
+                    </p>
+
+                    <article class="entrada">
+                        <div class="entrada__contenido">
+                            <h2 style="text-align: center;" class="no-margin">Nuestra selección de coctelería</h2>
+                        </div>
+                        <p class="widget-curso__label">Acompañamientos sugeridos:</p>
+                        <ul class="widget-guarniciones">
+                            <li>Tartaletas de queso brie con mermelada de higo</li>
+                            <li>Mini tostadas de salmón ahumado con crema de limón y eneldo</li>
+                            <li>Almendras tostadas con sal marina y cáscara de naranja</li>
+                        </ul>
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Una reinterpretación sofisticada del clásico brasileño: caipiriña artesanal infusionada con jugo
+                        natural de naranja y ramas de romero fresco, que aportan un aroma herbal y una profundidad
+                        inigualable. Una bebida vibrante, refrescante y equilibradamente dulce, ideal para acompañar
+                        conversaciones o como preámbulo a una comida memorable.
+                    </p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(7)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/bebidas/caipirinha_romero.webp" type="image/webp">
+                            <img loading="lazy" src="img/bebidas/caipirinha_romero.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Caipiriña de frutos del bosque con infusión de romero</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$180</span>
+                    </p>
+                    <p class="widget-curso__label">Acompañamientos sugeridos:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Canapés de queso de cabra con reducción de frutos rojos</li>
+                        <li>Croquetas de jamón serrano con alioli de lavanda</li>
+                        <li>Tostaditas de betabel con mousse de aguacate y almendra laminada</li>
+                    </ul>                    
+
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Descubre esta elegante versión de la caipiriña, teñida de un profundo tono morado gracias a la
+                        mezcla de frutos del bosque como mora azul y zarzamora, infusionada con romero fresco para un
+                        aroma herbal irresistible. Equilibrada, refrescante y sofisticada: una joya en copa que
+                        despierta todos los sentidos.</p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(8)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/bebidas/daiquir_rodaja.webp" type="image/webp">
+                            <img loading="lazy" src="img/bebidas/daiquir_rodaja.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Daiquirí clásico al limón con corte cítrico</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$300</span>
+                    </p>
+                    <p class="widget-curso__label">Acompañamientos sugeridos:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Camarones empanizados con ralladura de lima y mayonesa cítrica</li>
+                        <li>Bruschettas de aguacate, limón y semillas de girasol</li>
+                        <li>Rollitos de pepino con queso crema y eneldo</li>
+                    </ul>                    
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Un cóctel atemporal que rinde homenaje a la frescura: ron blanco de calidad, jugo de limón recién
+                        exprimido y un toque de azúcar, servido con finas rodajas de limón que elevan su perfil cítrico.
+                        Refrescante, limpio y equilibrado, perfecto para comenzar una tarde o como maridaje de platillos
+                        ligeros.
+                    </p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(9)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/bebidas/daiquiri.webp" type="image/webp">
+                            <img loading="lazy" src="img/bebidas/daiquiri.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Daiquirí de toronja rosada con toque de miel silvestre</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$300</span>
+                    </p>
+                    <p class="widget-curso__label">Acompañamientos sugeridos:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Tartar de atún con aguacate y ajonjolí negro</li>
+                        <li>Chips de batata con sal de jamaica</li>
+                        <li>Queso de cabra envuelto en hoja de parra con toque de miel y nuez</li>
+                    </ul>                    
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Una versión vibrante del clásico: ron blanco, jugo de toronja rosada recién exprimido y un
+                        delicado toque de miel silvestre, servido frío para resaltar su acidez refrescante y su amargor
+                        sutil. Una bebida sofisticada que limpia el paladar y despierta los sentidos, ideal para
+                        ocasiones especiales.
+                    </p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(10)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/bebidas/media_lima.webp" type="image/webp">
+                            <img loading="lazy" src="img/bebidas/media_lima.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Margarita artesanal de media lima y sal volcánica</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$200</span>
+                    </p>
+                    <p class="widget-curso__label">Acompañamientos sugeridos:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Mini tacos de pescado al grill con mayonesa de chipotle y col morada</li>
+                        <li>Queso panela a la plancha con reducción de lima y tomillo</li>
+                        <li>Tostadas de ceviche de palmito con mango y chile serrano</li>
+                    </ul>                    
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Disfruta de esta reinterpretación del clásico margarita, preparada con tequila premium, jugo
+                        fresco de media lima y un toque de licor de naranja, servida en copa escarchada con sal
+                        volcánica. Una explosión cítrica con elegancia natural que refresca y revitaliza al primer
+                        sorbo.
+                    </p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(11)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+
+            <div class="platillo-info">
+                <article class="entrada">
+                    <div class="entrada__imagen">
+                        <picture>
+                            <source loading="lazy" srcset="img/bebidas/vegano.webp" type="image/webp">
+                            <img loading="lazy" src="img/bebidas/vegano.webp" alt="imagen blog">
+                        </picture>
+                    </div>
+                </article>
+                <li class="widget-curso">
+                    <h4 class="no-margin">Ron blanco con pulpa de frambuesa y escarchado de hibisco</h4>
+                    <p class="widget-curso__label">Precio:
+                        <span class="widget-curso__info">$400</span>
+                    </p>
+                    <p class="widget-curso__label">Acompañamientos sugeridos:</p>
+                    <ul class="widget-guarniciones">
+                        <li>Brochetas caprese con frambuesa y reducción de balsámico</li>
+                        <li>Galletas saladas con queso azul y mermelada de frutos rojos</li>
+                        <li>Mini tartaletas de betabel con queso ricotta y nuez moscada</li>
+                    </ul>                    
+                </li>
+
+                <div class="entrada__contenido">
+                    <p>Una bebida vibrante y seductora: ron blanco de cuerpo firme, macerado con frambuesas frescas y un
+                        toque de limón, servido con escarchado de flor de hibisco y coronado con frutos rojos.
+                        Refrescante y ligeramente dulce, ideal para quienes buscan un cóctel con carácter frutal y un
+                        final persistente.
+                    </p>                    
+                    <a href="#" class="boton boton--primario" onclick="reservarPlatillo(12)">Conocer más sobre la preparación</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="contenedor">
+            <div class="barra">
+                <a class="logo" href="index.html">
+                    <h1 class="logo__nombre no-margin centrar-texto">El gran <span class="logo__bold">Mesón</span></h1>
+                </a>
+
+                <nav class="navegacion">
+                    <a href="nosotros.html" class="navegacion__enlace">Nosotros</a>
+                    <a href="cafeteria.html" class="navegacion__enlace">Cafetería</a>
+                    <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+                </nav>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/modernizr.js"></script>
+</body>
+<script>
+    function reservarPlatillo(id) {        
+        window.location.href = `entrada.html?id=${id}`;
+    }
+</script>
+</html>
