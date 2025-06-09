@@ -273,6 +273,17 @@ img {
     }
 }
 
+/*Contacto*/
+#sinCobertura_contacto_wa{
+    font-size:5rem;
+    color:#00ff40;
+    cursor: pointer;
+}
+.pie_wha{
+    font-size: 2rem;
+    margin:-2rem 0 0 0;
+}
+
 /** Cursos **/
 .curso {
     padding: 3rem 0;
@@ -329,4 +340,9 @@ img {
 }
 .campo__field--textarea {
     height: 20rem;
+}
+.actions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

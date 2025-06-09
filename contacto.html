@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/contacto.js"></script>
 </head>
 
 <body>
@@ -51,8 +53,14 @@
         
             <input type="hidden" id="time" name="time" />
         
-            <div class="campo" style="justify-content: center;">
+            <div class="actions">
                 <input type="submit" value="Enviar" class="boton boton--primario" id="button" />
+                <div class="actions">
+                    <h3>O envíenos un Whatsapp</h3>
+                    <div>
+                        <i class="fa-brands fa-whatsapp" id="sinCobertura_contacto_wa" onclick="sinCoverturaContacto()"></i>                    
+                    </div>
+                </div>                
             </div>
         </form>
         
