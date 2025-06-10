@@ -26,10 +26,10 @@ function initialize() {
         map: map,
         title: "Ubicación central",
         icon: {
-          //url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png"
-            url: "../img/alfiler.png", // Reemplaza por tu URL o ruta local
-            scaledSize: new google.maps.Size(40, 40) // Ajusta tamaño si es necesario
+          //url: "http://maps.google.com/mapfiles/ms/icons/red-dot.png",
+          url: "/ElGranMesonProject/img/alfiler.png", // Reemplaza por tu URL o ruta local
+          scaledSize: new google.maps.Size(40, 40) // Ajusta tamaño si es necesario
         }
       });
-      
+      //C:\xampp\htdocs\ElGranMesonProject\img\alfiler.png
 }

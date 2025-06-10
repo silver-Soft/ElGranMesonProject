@@ -1,0 +1,63 @@
+
+.dashboard-content {
+  margin-left: 60px; /* igual al ancho del sidebar contraído */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra el contenido horizontalmente */  
+}
+
+table {
+	width: 90%;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255,255,255,0.2);	
+}
+
+th {
+	text-align: left;
+}
+
+thead {
+	th {
+		background-color: #55608f;
+	}
+}
+
+tbody {
+	tr {
+		&:hover {
+			background-color: rgba(255,255,255,0.3);
+		}
+	}
+	td {        
+		position: relative;
+		&:hover {
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(255,255,255,0.2);
+				z-index: -1;
+			}
+		}
+	}
+}
+
+.encabezado{
+    color: white;
+    text-align: center;
+}
+.dato{
+    color: black;
+    text-align: center;
+}

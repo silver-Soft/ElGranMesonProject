@@ -171,7 +171,7 @@ session_start();
                     <button class="submit_btn no-margin" type="submit">Acceder con mi cuenta</button>
                     <div class="opciones">                    
                         <button class="submit_btn no-margin" type="button" onclick="mostrarRegistro()">Registrarse</button>
-                        <button class="submit_btn no-margin" type="button" onclick="window.history.back();">Volver</button>
+                        <button class="submit_btn no-margin" type="button" onclick="window.location.href='index.html';">Volver</button>
                     </div>
                 </form>    
 

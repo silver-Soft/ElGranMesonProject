@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-06-2025 a las 23:01:25
--- Versión del servidor: 10.4.25-MariaDB
--- Versión de PHP: 7.4.30
+-- Tiempo de generación: 10-06-2025 a las 04:26:19
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `roles` (
   `id_rol` int(11) NOT NULL,
-  `descrip` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL
+  `descrip` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -51,12 +51,12 @@ INSERT INTO `roles` (`id_rol`, `descrip`) VALUES
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL,
-  `usuario` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `contrasena` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `nombre` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `apellidos` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_rol` int(10) NOT NULL DEFAULT 5,
-  `rol` varchar(50) COLLATE utf8mb4_unicode_ci DEFAULT NULL
+  `usuario` varchar(50) NOT NULL,
+  `contrasena` varchar(255) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `apellidos` varchar(100) NOT NULL,
+  `id_rol` int(10) DEFAULT NULL,
+  `rol` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
@@ -64,7 +64,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id`, `usuario`, `contrasena`, `nombre`, `apellidos`, `id_rol`, `rol`) VALUES
-(1, 'Marely', '$2y$10$ylSYPMzwVmijNSjI.XwdquHsuifGu4obn4Fy4zGbdrzGT6i5EZDtW', 'Marely', 'Romero', 1, 'admin');
+(1, 'Marely', '$2y$10$ylSYPMzwVmijNSjI.XwdquHsuifGu4obn4Fy4zGbdrzGT6i5EZDtW', 'Marely', 'Romero', 1, 'root'),
+(2, 'Jennfriki', '$2y$10$2KHjRDUj97kY0nIpoUmlCe0up4V2VjXd0XVFPyR7hi0YDuBdOPHQ6', 'Jennyfer', 'Romero López', 2, 'admin'),
+(3, 'uripakini', '$2y$10$gR2ZOWVu0V4PVJMRVdUor.Auz6Gxmj0FgY/aJnkcXuPZuxHU0PL3S', 'Uriel ', 'Pakini', 3, 'supervisor');
 
 --
 -- Índices para tablas volcadas
@@ -97,7 +99,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
