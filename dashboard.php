@@ -5,7 +5,7 @@ $usuario = isset($_SESSION['usuario']) ? $_SESSION['usuario'] : 'Invitado';
 require 'conexion.php';
 
 try {
-    $stmt = $pdo->query("SELECT id, usuario, nombre, apellidos, rol FROM usuarios");
+    $stmt = $pdo->query("SELECT id_usuario, usuario, nombre, apellidos, rol FROM usuarios");
     $usuarios = $stmt->fetchAll(PDO::FETCH_ASSOC);
     //var_dump($usuarios);
 
@@ -47,8 +47,8 @@ try {
         <div class="container">
             <div class="barra">
                 <a class="logo" href="#">
-                    <svg width="395.99999999999994" height="107.76731856035342" 
-                    style="max-width:100%;" viewBox="0 0 369.5483870967742 100.5687847366739"
+                    <svg width="395.99999999999994" height="107.76731856035342"
+                        style="max-width:100%;" viewBox="0 0 369.5483870967742 100.5687847366739"
                         class="looka-1j8o68f">
                         <defs id="SvgjsDefs3137"></defs>
                         <g id="SvgjsG3138" featurekey="symbolFeature-0"
@@ -193,7 +193,7 @@ try {
                     </svg>
                 </a>
                 <nav class="navegacion">
-                    <a href="#" style="cursor: default;" class="navegacion__enlace"><?php echo htmlspecialchars($username[0]['nombre'] . ' ' . $username[0]['apellidos']);?></a>
+                    <a href="#" style="cursor: default;" class="navegacion__enlace"><?php echo htmlspecialchars($username[0]['nombre'] . ' ' . $username[0]['apellidos']); ?></a>
                     <a href="logout.php" class="navegacion__enlace">Logout
                         <i class="fa-solid fa-power-off"></i>
                     </a>
@@ -206,81 +206,93 @@ try {
         <div class="container" style="padding: 0%;">
             <div class="sidebar">
                 <?php if (isset($_SESSION['id_rol']) && ($_SESSION['id_rol'] == 1 || $_SESSION['id_rol'] == 2)): ?>
-                            
-                    <div class="item">
-                        <i class="fa-solid fa-users-gear"></i>                 
+
+                    <div class="item" data-target="dashboard/vistas/admin_usuarios.php">
+                        <i class="fa-solid fa-users-gear"></i>
                         <span class="text">Administrar usuarios</span>
                     </div>
-                    <div class="item">
-                        <i class="fa-solid fa-coins"></i>                 
-                        <span class="text">Finanzas</span>
+
+                    <div class="item" data-target="dashboard/vistas/admin_reservaciones.php">
+                        <i class="fa-solid fa-users-gear"></i>
+                        <span class="text">Administrar reservaciones</span>
                     </div>
 
-                    <div class="item">
-                        <i class="fa-solid fa-chart-simple"></i>               
-                        <span class="text">Estadisticas</span>
-                    </div>   
                 <?php endif; ?>
-                
-                <div class="item">
-                    <i class="fa-solid fa-calendar-days"></i>             
-                    <span class="text">Agenda</span>
-                </div>
+
+                <?php if (isset($_SESSION['id_rol']) && ($_SESSION['id_rol'] == 10)): ?>
+
+                    <div class="item" data-target="dashboard/vistas/mis_reservaciones.php">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span class="text">Mis reservaciones</span>
+                    </div>
+                    <div class="item" data-target="dashboard/vistas/nueva_reservacion.php">
+                        <i class="fa-solid fa-plus"></i>
+                        <span class="text">Nueva reservación</span>
+                    </div>
+                <?php endif; ?>
 
                 <div class="item">
-                    <i class="fa-solid fa-sliders"></i>                 
-                    <span class="text">Configuración</span>
+                    <a href="logout.php" class="logout-link">
+                        <i class="fa-solid fa-power-off"></i>
+                        <span class="text">Cerrar sesión</span>
+                    </a>
                 </div>
-                <div class="item" href="logout.php">
-                    <i class="fa-solid fa-power-off"></i>             
-                    <span class="text">Cerrar sesión</span>
-                </div>
-            </div>            
-        </div>        
+            </div>
+        </div>
         <div class="dashboard-content" style="width:100%; overflow-x: scroll;">
-            <?php if (isset($_SESSION['id_rol']) && ($_SESSION['id_rol'] == 1 || $_SESSION['id_rol'] == 2)): ?>
-                    <h2>Usuarios del sistema</h2>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th class="encabezado">Id</th>
-                                <th class="encabezado">Usuario</th>
-                                <th class="encabezado">Nombre</th>
-                                <th class="encabezado">Apellidos</th>
-                                <th class="encabezado">Rol</th>
-                                <th class="encabezado">Cambiar rol</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($usuarios as $usuario): ?>
-                                <tr>
-                                    <td class="dato"><?php echo htmlspecialchars($usuario['id']); ?></td>
-                                    <td class="dato"><?php echo htmlspecialchars($usuario['usuario']); ?></td>
-                                    <td class="dato"><?php echo htmlspecialchars($usuario['nombre']); ?></td>
-                                    <td class="dato"><?php echo htmlspecialchars($usuario['apellidos']); ?></td>
-                                    <td class="dato"><?php echo htmlspecialchars($usuario['rol']); ?></td>
-                                    <td class="dato">
-                                            <form method="POST" action="cambiar_rol.php">
-                                                <input type="hidden" name="usuario_id" value="<?php echo $usuario['id']; ?>">
-                                                <select name="nuevo_rol">
-                                                    <?php foreach ($roles as $rol): ?>
-                                                    <option value="<?php echo htmlspecialchars($rol['id_rol']); ?>">
-                                                        <?php echo htmlspecialchars($rol['descrip']); ?>
-                                                    </option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                            <button type="submit">Actualizar</button>
-                                        </form>
-                                    </td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>                                                 
-                <?php endif; ?>           
+            
         </div>
     </main>
-    
+
     <script src="js/modernizr.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.item[data-target]');
+            const dashboardContent = document.querySelector('.dashboard-content');
+
+            // Cargar vista por defecto (opcional)
+            if (items.length > 0) {
+                loadView(items[0].getAttribute('data-target'));
+            }
+
+            items.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    loadView(this.getAttribute('data-target'));
+                });
+            });
+
+            function loadView(target) {
+                fetch(target)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Error al cargar la vista');
+                        }
+                        return response.text();
+                    })
+                    .then(data => {
+                        dashboardContent.innerHTML = data;
+                        // Ejecutar scripts dentro del contenido cargado
+                        const scripts = dashboardContent.querySelectorAll('script');
+                        scripts.forEach(script => {
+                            const newScript = document.createElement('script');
+                            newScript.text = script.innerHTML;
+                            document.body.appendChild(newScript).remove();
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        dashboardContent.innerHTML = `
+                    <div class="error">
+                        <p>Error al cargar la vista</p>
+                        <small>${error.message}</small>
+                    </div>
+                `;
+                    });
+            }
+        });
+    </script>
 </body>
 <script>
     const toggleBtn = document.getElementById('toggleSidebar');
@@ -290,4 +302,5 @@ try {
         sidebar.classList.toggle('open');
     });
 </script>
+
 </html>

@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nueva_descripcion = $rolData['descrip'];
 
         // Actualiza en usuarios ambos campos
-        $stmt = $pdo->prepare("UPDATE usuarios SET id_rol = :id_rol, rol = :rol WHERE id = :usuario_id");
+        $stmt = $pdo->prepare("UPDATE usuarios SET id_rol = :id_rol, rol = :rol WHERE id_usuario = :usuario_id");
         $stmt->bindParam(':id_rol', $nuevo_rol, PDO::PARAM_INT);
         $stmt->bindParam(':rol', $nueva_descripcion);
         $stmt->bindParam(':usuario_id', $usuario_id, PDO::PARAM_INT);

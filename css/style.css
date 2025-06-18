@@ -60,7 +60,7 @@ img {
 
 /** Header index**/
 .webp .header {
-    background-image: url(../img/platillos/steak_banner.jpg);
+    background-image: url(../img/cocktailBanner.webp);
     background-color: #000000;
     opacity: 0.9;
 }
@@ -137,10 +137,18 @@ img {
     }
 }
 .navegacion__enlace {
-    display: block;
+    display: inline-block; /* Cambia de 'block' a 'inline-block' para mejor control */
     text-align: center;
     font-size: 1.8rem;
     color: var(--blanco);
+    padding: 5px 10px; /* Espacio inicial (ajusta según necesites) */
+    border-radius: 10px;
+    transition: all 0.3s ease; /* Suaviza la animación */
+}
+.navegacion__enlace:hover {
+    background-color: #000000;
+    transform: translateY(-5px); /* Mueve el botón 5px hacia arriba */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Opcional: añade sombra para efecto de elevación */
 }
 
 .blog{
@@ -365,7 +373,7 @@ img {
 .background{   
     top: 0px;
     background-size: cover;
-    background-image: url(../img/platillos/carne_mesa.webp);
+    background-image: url(../img/cocktailBanner.webp);
     height: 100%;
     width: 100%;
     background-repeat: no-repeat;
@@ -498,6 +506,8 @@ img {
 
 .item i{
     font-size: xx-large;
+    color: white;
+    
 }
 .sidebar .item:hover {
     background-color: #0077ff;
@@ -513,6 +523,7 @@ img {
     opacity: 0;
     transition: opacity 0.3s ease;
     margin-left: 20px;
+    color: white;
 }
 
 /* Mostrar el texto solo cuando sidebar está expandido */

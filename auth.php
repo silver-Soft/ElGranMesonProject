@@ -23,6 +23,7 @@ if ($usuario && $contrasena) {
 
         // Si tiene rol, iniciar sesión
         $_SESSION['usuario'] = $usuarioBD['usuario'];
+        $_SESSION['id_usuario'] = $usuarioBD['id_usuario'];
         $_SESSION['nombre'] = $usuarioBD['nombre'];
         $_SESSION['id_rol'] = $usuarioBD['id_rol'];
         header("Location: dashboard.php");

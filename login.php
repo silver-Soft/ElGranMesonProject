@@ -177,10 +177,11 @@ session_start();
 
                 <!-- FORMULARIO REGISTRO -->
                 <form id="formRegistro" class="formulario" style="background-color: transparent; margin-top:0px; padding-top:0px; display: none;" method="POST" action="register.php">            
-                    <input type="text" required class="campo" name="usuario" placeholder="Usuario">
+                    <input type="email" required class="campo" name="usuario" placeholder="Usuario">
                     <input type="password" required class="campo" name="contrasena" placeholder="Contraseña">
                     <input type="text" required class="campo" name="nombre" placeholder="Nombre">
                     <input type="text" required class="campo" name="apellidos" placeholder="Apellidos">
+                    <input type="phone" required class="campo" name="telefono" placeholder="Teléfono">
                     <button class="submit_btn no-margin" type="submit">Crear cuenta</button>
                     <div class="opciones">                    
                         <button class="submit_btn no-margin" type="button" onclick="mostrarLogin()">Volver al login</button>
