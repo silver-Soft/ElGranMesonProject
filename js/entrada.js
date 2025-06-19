@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             `,
       htmlNutrim: `
             <ul>
-            <li>% Alcohol: ~15-20%</li>
+            <li>% Alcohol: ~0%</li>
             <li>Calorías: ~250-300 kcal</li>
             </ul>
             `,
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~12-15%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~280-350 kcal</li>
       </ul>`,
     },
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~15-18%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~350-400 kcal</li>
       </ul>`,
     },
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~20-25%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~200-250 kcal</li>
       </ul>`,
     },
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~20-25% (¡Peligrosamente fuerte!)</li>
+        <li>% Alcohol: ~0% (¡Peligrosamente fuerte!)</li>
         <li>Calorías: ~300-400 kcal</li>
       </ul>`,
     },
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~20-25% (¡Peligrosamente fuerte!)</li>
+        <li>% Alcohol: ~0% (¡Peligrosamente fuerte!)</li>
         <li>Calorías: ~300-400 kcal</li>
       </ul>`,
     },
@@ -108,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~10-12%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~150-200 kcal</li>
       </ul>`,
     },
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~15-18%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~220-280 kcal</li>
       </ul>`,
     },
@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~14-16%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~250-320 kcal</li>
         <li>Aromas: Perfil profundo y fresco (romero + frutos rojos)</li>
       </ul>`,
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~20-22%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~180-220 kcal</li>
         <li>Nota: Frescura cítrica acentuada</li>
       </ul>`,
@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~18-20%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~240-300 kcal</li>
         <li>Variante: Daiquirí frutal</li>
       </ul>`,
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~25-28%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~280-350 kcal</li>
         <li>Contraste: Ácido-dulce con sal ahumada</li>
       </ul>`,
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", () => {
       </ul>
       <h2>Información nutrimental</h2>`,
       htmlNutrim: `<ul>
-        <li>% Alcohol: ~16-18%</li>
+        <li>% Alcohol: ~0%</li>
         <li>Calorías: ~260-330 kcal</li>
         <li>Características: Color vibrante, perfume frutal</li>
       </ul>`,

@@ -213,7 +213,7 @@ try {
                     </div>
 
                     <div class="item" data-target="dashboard/vistas/admin_reservaciones.php">
-                        <i class="fa-solid fa-users-gear"></i>
+                        <i class="fa-solid fa-utensils"></i>
                         <span class="text">Administrar reservaciones</span>
                     </div>
 
