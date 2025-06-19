@@ -196,15 +196,15 @@
 
             <input type="hidden" id="time" name="time" />
 
-
-        </form>
-        <div class="actions">
-            <input type="submit" value="Enviar" class="boton boton--primario" id="button" />
-            <h3>O envíenos un Whatsapp</h3>
-            <div>
-                <i class="fa-brands fa-whatsapp" id="sinCobertura_contacto_wa" onclick="sinCoverturaContacto()"></i>
+            <div class="actions" style="margin-top: 10rem;">
+                <input type="submit" value="Enviar" class="boton boton--primario" id="button" />
+                <h3>O envíenos un Whatsapp</h3>
+                <div>
+                    <i class="fa-brands fa-whatsapp" id="sinCobertura_contacto_wa" onclick="sinCoverturaContacto()"></i>
+                </div>
             </div>
-        </div>
+        </form>
+        
     </main>
 
     <footer class="footer">
@@ -232,21 +232,21 @@
 
     <script>
         // Inicializar EmailJS
-        emailjs.init("XRViQiF9SPwiopCIl"); // Reemplaza con tu public key
-
+        emailjs.init("XRViQiF9SPwiopCIl");
+    
         // Escuchar el evento del formulario
         document.getElementById('contact-form').addEventListener('submit', function (e) {
-            e.preventDefault();
+            e.preventDefault();             
 
-            // Establece el campo time antes de enviar
+            // Establecer el campo oculto "time"
             document.getElementById('time').value = new Date().toLocaleString();
-
+    
             const btn = document.getElementById('button');
             btn.value = 'Enviando...';
-
+    
             const serviceID = 'service_citgzoc';
             const templateID = 'template_gpuifks';
-
+    
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
                     btn.value = 'Enviar';
@@ -259,6 +259,7 @@
                 });
         });
     </script>
+    
 
 
 </body>
